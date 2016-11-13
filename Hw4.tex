@@ -120,10 +120,21 @@ In this problem, we prove that the average depth of a node in a randomly built b
 
 \subitem \textbf{a.} Argue that the average depth of a node in $T$ is $$1/n \sum_{x \in T} d(x, T) = 1/n P(T)$$ \hspace{11mm}Thus, we wish to show that the expected value of $P(T)$ is $O(nlgn)$. 
 
+{\textit{Answer}} 
+
+It is shown to be true as by definition the average depth of a node is the sum of all depths $1/n \sum_{x \in T} d(x, T)$ is divided by the total number of nodes $n$, thus proven.
+
 \newpage
 
+\subitem \textbf{b.} Let $T_L$ amd $T_R$ denote the left and right subtrees of tree $T$, respectively. Argue that if $T$ has $n$ nodes, then 
+
+$P(T) = P(T_L) + P(T_R) + n - 1$. 
+
+\textit{Answer}
 
 
+\newpage
+ 
 \item (10 pts) Solve Exercise 12.2-8 on Page 294 of your textbook.
 
 \item (20 pts) Solve Problem 13-3 on Page 333 of your textbook.
