@@ -132,12 +132,100 @@ $P(T) = P(T_L) + P(T_R) + n - 1$.
 
 \textit{Answer}
 
+Given a variable $x \in T_L$, this means that the length of the path for $x$ in $T$ is the path length for $x \in T_L$, in addition to the edge that connects the root. Thus, the same goes for $P(T_R)$. The height of the root of $T$ is 0 and the union of $P_L$ and $P_R$ is $n-1$, giving the initial equation $P(T) = P(T_L) + P(T_R) + n - 1$.
 
 \newpage
- 
-\item (10 pts) Solve Exercise 12.2-8 on Page 294 of your textbook.
 
-\item (20 pts) Solve Problem 13-3 on Page 333 of your textbook.
+\subitem \textbf{c.} Let $P(n)$ denote the average total path length of a randomly built binary search tree with $n$ nodes. Show that $$P(n) = 1/n   \sum_{i = 0}^{n-1} (P(i) + P(n - i - 1) + n - 1)$$
+
+\textit{Answer}
+
+If we start with the initial equation where $P(n, i)$ is the total path length of a binary search tree with total nodes $n$ with $i$ nodes in the left subtree , then using \textbf{b.} from the same problem, we can show that $P(n, i) = P(i) + P(n - i - 1) + n - 1$. We can then show the average of $P(n)$ as $P(n) = 1/n \sum_{k = 0}^{n - 1} P(n, i)$, which is simplified to $$P(n) = 1/n   \sum_{i = 0}^{n-1} (P(i) + P(n - i - 1) + n - 1)$$
+
+\newpage
+
+\subitem \textbf{d.} Show how to rewrite $P(n)$ as $$P(n) = 2/n \sum_{k= 1}^{n - 1} P(k) + \Theta(n)$$
+
+\textit{Answer}
+
+$$P(n) = 1/n \sum_{k = 0}^{n-1} (P(k) + P(n - k -1) + n - 1)$$
+$$1/n\sum_{k = 0}^{n-1}(P(k) + P(n-k-1)) + 1/n\sum_{k=0}^{n-1}(n - 1)$$
+$$P(n) = 1/n \sum_{k = 0}^{n-1} (P(k) + P(n - k -1)) + \Theta(n)$$
+
+$$P(n) = 1/n \sum_{k = 0}^{n-1} (P(k) + P(n - k -1)) = P(0) + P(n - 1) \dotso P(1) + P(n-2)  \dotso P(n-1) + P(0)$$
+$$P(n) = 2/n \sum_{k= 1}^{n - 1} P(k) + \Theta(n)$$
+
+\newpage
+
+\subitem \textbf{e.} Recalling the alternative analysis of the randomized version of quicksort given in Problem 7-3, conclude that $P(n) = O(nlgn)$.
+
+$$P(n) = 2/n \sum_{k= 2}^{n - 1} P(k) + \Theta(n)$$
+$$\sum_{k=2}^{n-1}klgk \leq 1/2n^2 lg(n) - 1/8n^2$$
+
+which can be simplified to
+
+$$\sum_{k=2}^{n-1}klgk = \sum_{k=2}^{n/2 -1}klgk + \sum_{k=n/2}^{n-1} klgk$$
+
+afterwards, finding an upper bound
+
+$$\sum{k=2}^{n-1} klg \leq lg n/2 \sum{k=2}^{n/2 -1} k +.lgn \sum{k=n/2}^{n-1}k$$
+
+$$lgn \sum{k=2}^{n-1}k - \sum_{k=2}^{n/2-1}k \leq lgn((n-1)n)/2 - ((n/2 - 1)n/2)/2$$
+
+$$\leq 1/2n^2lgn - 1/8n^2 where n\geq 2$$
+
+Thus, through substitution
+
+$$2c/n\sum{k=1}^{n-1} klgk.+ \Theta(n) \leq 2c/n(1/2 n^2lgn - 1/8n^2) + \Theta(n)$$
+$$ \leq cnlgn$$
+
+which holds true if $c/4n \geq \Theta(n)$
+
+Thus $P(n) = O(nlgn)$
+
+
+\newpage
+
+At each recursive invocation of quicksort, we choose a random pivot element to partition the set of elements being sorted. Each node of a binary search tree partitions the set of elements that fall into the subtree rooted at that node.
+
+\subitem \textbf{f.} Describe an implementation of quicksort in which the comparisons to sort a set of elements are exactly the same as the comparisons to insert the elements into a binary search tree. (The order in which comparisons are made may differ, but the same comparisons must occur.) 
+
+\textit{Answer}
+
+With quicksort, we know that the elements in the left and right partitions are never compared along with all elements after the chosen pivot are compared. Additionally, we know that binary search tree insertion results in a comparison to the root for all nodes inserted after it. The elements inserted into the respective subtrees are never compared to the opposite side either, e.g. the left subtree does not compare itself against the right subtree. Thus, a quicksort implementation that chooses the pivot in the same order as elements inserted into a binary tree will function the same way.
+
+\newpage
+
+\item \textbf{12.2-8}
+
+Prove that no matter what node we start at in a height-$h$ binary search tree, $k$ successive calls to TREE-SUCCESSOR take $O(k + h)$ time. 
+
+\textit{Answer}
+
+We can prove this by initially starting with k successive calls of TREE-SUCCESSOR starting from element $x$, there are are most $h$ elements smaller than $x$ visited, and at most $h$ elements greater than $x+k$ visited. Thus, elements > $x+k$ are visited only when going down the tree. 
+
+Elements between $x$ and $x + k$ are visited at most twice, once up and once down the tree. Given two nodes where $b$ is the left child of $a$, then before visiting $a$, the all elements greater than $x$ are visited in the left subtree. After those nodes are visited, then $a$ is visited. Given if $b$ is the right child, then after $a$ is visited, TREE-SUCCESSOR gets the minimum element in $b$'s right subtree. The area in the tree is not traversed again. Thus, giving $O(h + k)$.
+\newpage. 
+
+\item \textbf{13-3 AVL trees}
+
+An \textbf{AVL tree} is a binary search tree that is \textbf{height balanced}: for each node $x$, the heights of the left and right subtrees of $x$ differ by at most 1. To implement an AVL tree, we maintain an extra attribute in each node: $x.h$ is the height of node $x$. As for any other binary search tree $T$, we assume that $T.root$ points to the root node. 
+
+\subitem \textbf{a.} Prove that an AVL tree with $n$ nodes has height $O(lgn)$. ($Hint$: Prove that an AVL tree of height $h$ has at least $F_h$ nodes, where $F_h$ is the $h$th Fibonacci number.) 
+
+\textit{Answer}
+
+Given an AVL tree, we can let the $T(h)$ be the minimum number of nodes in a tree with a tree of height $h$. We can prove that an AVL tree with $n$ nodes has height $O(lgn)$ through induction. For the base case, $T(1) \geq T(0) \geq 1$, thus $T(1) \geq F_1$ and $T(0) \geq F_0$.  
+
+$T(h') \geq F_h'$ for all $h' < h$
+
+The AVL tree root height $h$ has two child nodes with heights $h-1$ and $h-2$. Thus the min number of nodes is shown by $T(h-1)$ and $T(h-2)$. Through induction, $T(h) \geq F_x + F_y = F_h$ where $ x = h - 1$ and $y = h-2$. This concludes that $h=O(lgn)$
+
+\newpage
+
+\subitem \textbf{b.} To insert into an AVL tree, we first place a node into the appropriate place in binary search tree order. Afterward, the tree might no longer be height balanced. Specifically, the heights of the left and right children of some node might differ by 2. Describe a procedure BALANCE($x$), which takes a subtree rooted at $x$ whose left and right children are height balanced and have heights that differ by at most 2, i.e, $|x.right.h - x.left.h| \leq 2$ , and alters the subtree rooted at $x$ to be height balanced. ($Hint$: Use rotations.)
+
+\newpage
 
 \item (15 pts) You are given a red-black tree $T$ with 15 internal nodes (nodes that hold key values) 
 that form a \emph{full} binary tree of height 3 (i.e., a full binary tree of height 4 if you include 
