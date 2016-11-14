@@ -5,6 +5,7 @@
 
 \usepackage{listings}
 \usepackage{color}
+\usepackage{graphicx}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -225,6 +226,26 @@ The AVL tree root height $h$ has two child nodes with heights $h-1$ and $h-2$. T
 
 \subitem \textbf{b.} To insert into an AVL tree, we first place a node into the appropriate place in binary search tree order. Afterward, the tree might no longer be height balanced. Specifically, the heights of the left and right children of some node might differ by 2. Describe a procedure BALANCE($x$), which takes a subtree rooted at $x$ whose left and right children are height balanced and have heights that differ by at most 2, i.e, $|x.right.h - x.left.h| \leq 2$ , and alters the subtree rooted at $x$ to be height balanced. ($Hint$: Use rotations.)
 
+\textit{Answer}
+
+There are two situations that result in the AVL tree being unbalanced after insertion. The tree is no longer height balanced due to one side of the tree having a larger height. To check for a height-balanced AVL tree, we start by checking if the height are less than or equal to 1, if they are, then it is balanced. Otherwise, if the left height is greater than the right height, then left-rotate the left side. If the right height is greater, then we right rotate and continue to do so until the tree is balanced.
+
+\newpage
+
+\subitem \textbf{c.} Using part (b), describe a recursive procedure AVL-INSERT(x, z) that takes a node $x$ within an AVL tree and a newly created node $z$. (whose key has already been filled in), and adds $z$ to the subtree rooted at $x$, maintaining the property that $x$ is the root of an AVL tree. As in TREE-INSERT from Section 12.3, assume that $z.key$ has already been filled in and that $z.left = NIL$ and $z.right = NIL$; also assume that $z.h = 0$. Thus, to insert the node $z$ into the AVL tree $T$, we call AVL-INSERT(T.root, z).
+
+\textit{Answer} 
+
+We can create a resursive insert function that takes in two parameters $x$ and $z$. We first create a termination statement by checking if $x$ is $NIL$ then setting $height[z] = 0$ and returning $z$. If the base case isn't met, then check if the key at position $z$ is less than or equal to the key at $x$. if the statement is true, then call insert with the parameters $(left[x], z)$ and set that to a variable $a$. Afterwards set $left[x]$ to a, the parent node at $y$ to $x$ and the height $x$ to height $y$ + 1. If the key at $z$ is greater than the key at $x$, then call insert with $(right[x], z)$ and set $right[x]$ to a and follow the same procedures as the previous part. Finally, call the balance method from part (b) on $x$ then return it. This will maintain the balance of the tree while inserting a node. 
+
+\newpage
+
+\subitem \textbf{d.} Show that AVL-INSERT, run on an $n$-node AVL tree, takes $O(lgn)$ time and performs $O(1)$ rotations.
+
+\textit{Answer}
+
+Since we know that the height of an AVL tree is $O(lgn)$, thus the insertion and update on the tree height will take $O(lgn)$. The balance function decreases the height of the tree by 1, thus it wont affect the rest of the tree. This means that the insert takes at worst case $O(lgn)$ with a constant rotation of $O(1)$. 
+
 \newpage
 
 \item (15 pts) You are given a red-black tree $T$ with 15 internal nodes (nodes that hold key values) 
@@ -237,10 +258,21 @@ insertion (in that order) would lead to such a tree, along with a figure of the 
 then explain why such an assignment cannot exist, using the fact that the tree needs to satisfy the 
 red-black properties.
 
+$1,2,3,4,5,6,7,8,9,0,1,3,2,4,5$
+
+\includegraphics[scale=0.6]{rbt}
+
+Any value inserted into the tree at this point will result in the root turning red then back to black as the leaves are all red along with the roots two children. 
+
+\newpage
+
 \item (12 pts) Provide an algorithm that, given a graph $G=(V,E)$ as input, decides whether $G$ is
 bipartite. Also, provide a tight bound regarding the worst-case running time of the algorithm (show
 how you got this bound), and explain why your algorithm is correct.
 
+\textit{Answer}
+
+We can use $BFS$ to check whether a graph $G$ is bipartite or not. First, we assign a red color to the initial vertex. Afterwards, color its neighbors blue. Then color the neighbor's neighbors with a red color. While coloring the vertexes if there is a neighbor that is colored the same color as the current vertex, then the graph is considered to not be a bipartite graph. Since we're using breadth first search to traverse the graph by coloring each node, our worst case run time complexity is $O(V + E)$. Since the algorithm will always traverse the entire graph to check whether it is bipartite, the runtime is always $O(V + E)$, thus giving a tight bound of $\theta (V + E)$. The algorithm itself is correct as a bipartite graph is one that has vertices that are divided into two sets. Coloring each consecutive set red then blue will result in the graph being either bipartite or the algorithm running into a neighbor colored with the same color as the current vertex, thus not being bipartite. Thus, the algorithm holds. 
 
 \end{enumerate}
 \end{document}
