@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  13 NOV 2016 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 NOV 2016 14:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -175,8 +175,7 @@ Package graphics Info: Driver file: pdftex.def on input line 96.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-No file Hw3.aux.
+) (./Hw3.aux)
 \openout1 = `Hw3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -192,7 +191,7 @@ LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 \c@lstlisting=\count108
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen118
@@ -293,8 +292,8 @@ Overfull \hbox (58.12764pt too wide) in paragraph at lines 263--264
 
 [18 <./rbt.png>] [19] (./Hw3.aux) ) 
 Here is how much of TeX's memory you used:
- 3910 strings out of 493014
- 53396 string characters out of 6133351
+ 3912 strings out of 493014
+ 53412 string characters out of 6133351
  143213 words of memory out of 5000000
  7394 multiletter control sequences out of 15000+600000
  12063 words of font info for 47 fonts, out of 8000000 for 9000
@@ -316,7 +315,7 @@ onts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt9.pfb>
-Output written on Hw3.pdf (19 pages, 204700 bytes).
+Output written on Hw3.pdf (19 pages, 204497 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
