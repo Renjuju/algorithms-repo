@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 NOV 2016 14:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 NOV 2016 16:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -148,35 +148,100 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 144.
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count100
+\lst@gtempboxa=\box28
+\lst@token=\toks26
+\lst@length=\count101
+\lst@currlwidth=\dimen114
+\lst@column=\count102
+\lst@pos=\count103
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count104
+\lst@lineno=\count105
+\lst@maxwidth=\dimen117
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count106
+\lst@skipnumbers=\count107
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count108
+\float@exts=\toks27
+\float@box=\box30
+\@float@everytoks=\toks28
+\@floatcapt=\box31
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks29
+\c@algorithm=\count109
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count110
+\c@ALG@rem=\count111
+\c@ALG@nested=\count112
+\ALG@tlm=\skip50
+\ALG@thistlm=\skip51
+\c@ALG@Lnr=\count113
+\c@ALG@blocknr=\count114
+\c@ALG@storecount=\count115
+\c@ALG@tmpcounter=\count116
+\ALG@tmplength=\skip52
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
 (./problemset4.aux)
 \openout1 = `problemset4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count100
-\scratchdimen=\dimen114
-\scratchbox=\box28
-\nofMPsegments=\count101
-\nofMParguments=\count102
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count103
-\MPscratchDim=\dimen115
-\MPnumerator=\count104
-\makeMPintoPDFobject=\count105
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count117
+\scratchdimen=\dimen118
+\scratchbox=\box32
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen119
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -224,12 +289,13 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+\c@lstlisting=\count123
+LaTeX Font Info:    Try loading font information for U+msa on input line 44.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+LaTeX Font Info:    Try loading font information for U+msb on input line 44.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -238,7 +304,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Warning: No \author given.
 
 
-Overfull \hbox (16.96158pt too wide) in paragraph at lines 17--18
+Overfull \hbox (16.96158pt too wide) in paragraph at lines 50--51
 []\OT1/cmr/m/n/10 (10 pts) Given the pat-tern $\OML/cmm/m/it/10 P \OT1/cmr/m/n/
 10 = \OML/cmm/m/it/10 abbababbaaab$ \OT1/cmr/m/n/10 and the text string $\OML/c
 mm/m/it/10 T \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 aaababaabaababaababbababbaaabba
@@ -248,10 +314,10 @@ bab$
 <automata.png, id=1, 1135.24126pt x 376.40625pt>
 File: automata.png Graphic file (type png)
  <use automata.png>
-Package pdftex.def Info: automata.png used on input line 21.
+Package pdftex.def Info: automata.png used on input line 54.
 (pdftex.def)             Requested size: 454.08846pt x 150.55983pt.
 
-Overfull \hbox (31.33347pt too wide) in paragraph at lines 21--22
+Overfull \hbox (31.33347pt too wide) in paragraph at lines 54--55
 [][] 
  []
 
@@ -260,24 +326,28 @@ Overfull \hbox (31.33347pt too wide) in paragraph at lines 21--22
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./autom
 ata.png>] [2] [3] [4] [5] [6] [7] [8] (./problemset4.aux) ) 
 Here is how much of TeX's memory you used:
- 2520 strings out of 493014
- 33630 string characters out of 6133351
- 93545 words of memory out of 5000000
- 6021 multiletter control sequences out of 15000+600000
- 10937 words of font info for 43 fonts, out of 8000000 for 9000
+ 4441 strings out of 493014
+ 61483 string characters out of 6133351
+ 152046 words of memory out of 5000000
+ 7904 multiletter control sequences out of 15000+600000
+ 12402 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,24p,504b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,40p,504b,1062s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2
 016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on problemset4.pdf (8 pages, 199877 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on problemset4.pdf (8 pages, 243336 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

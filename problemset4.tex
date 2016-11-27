@@ -4,6 +4,39 @@
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
 \usepackage{graphicx}
 \usepackage{color}
+\usepackage{listings}
+\usepackage{color}
+
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
 \begin{document}
 \title{CS 457, Data Structures and Algorithms I\\
 Fourth Problem Set}
@@ -50,10 +83,48 @@ $T=aaababaabaababaab\textcolor{red}{abbababbaaab}babab$
 
 \item (15 pts) Write an algorithm that reads characters one at a time and reports at each instant if the current string is a palindrome. Hint: Use the Rabin-Karp hashing idea.
 
+\begin{algorithm}
+\caption{Computes if current string is a palindrome at each substring}\label{euclid}
+\begin{algorithmic}[1]
+\Procedure{COMPUTE-PALINDROME(P)}{}
+\BState $\textit{m} \gets \text{P.length}$
+\BState let $\pi$[1\dotso m] be a new array
+\BState $\pi$[1] = $true$ //false by default
+\BState k = 0
+\BState \textbf{for}  $q$ = 2 \textbf{to} $m$
+\State \textbf{while} $k > 0$ and $P[k+1] \neq P[q]$
+\State \hspace{9mm} $k = \pi[k]$
+\State \textbf{if} $P[k+1] == P[q]$
+\State \hspace{9mm} $k = k + 1$
+\State \textbf{if}  $ k == q/2 $
+\State \hspace{9mm} $\pi[q] = true$
+\BState \textbf{return} $\pi$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+
 \newpage
 
 \item (15 pts) A directed Eulerian cycle is a directed cycle that contains each edge exactly once. Write an algorithm that finds a directed Eulerian cycle or reports that no such cycle exists. Hint: Prove that a strongly-connected digraph $G$ has a directed Eulerian cycle if and only if each vertex has its indegree equal to its outdegree.
+\begin{lstlisting}
+isDirectedEurleianCycle(G): 
 
+if(G has no edges) {
+  return false
+}
+
+for all vertices in G
+  if(outdegree(v) != indegree(v)) {
+    return false;
+  }
+  
+int cycles = DFS() where DFS returns number of cycles 
+
+if(cycles == G.getNumberofEdges()) {
+  return true;
+}
+\end{lstlisting}
 \newpage
 
 \item (15 pts) Given a DAG and two vertices $v$ and $w$, find a shortest ancestral path between $v$ and $w$. An ancestral path between $v$ and $w$ is a common ancestor $x$ along with a shortest directed path from $v$ to $x$ and a shortest directed path from $w$ to $x$. A shortest ancestral path in the ancestral path whose total length is minimized. Warmup: Find a DAG where the shortest ancestral path goes to a common ancestor $x$ that is not LCA. 
