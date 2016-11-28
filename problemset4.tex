@@ -188,12 +188,25 @@ for all (u, v) in S ordered by weight(u, v), increasing:
       x = x U {(u, v)}
       union(u, v)
 \end{lstlisting}
-
-The algorithm itself should run in $O(S log V)$ time, where S is the set of edges.
+The algorithm itself should run in $O(S log V)$ time, where S is the set of edges. For the initial part of the algorithm, $x = null$ will take constant time. The $CREATE-SET(v)$ will take $O(SlogS)$ time as it creates a set. (Hand wavy - refine). At each iteration in the second for loop, it checks whether $u$ and $v$ are not in the same set, which takes $O(N)$. Thus the toal running time of the algorithm is then $O(SlogV)$ as the upper bound. 
 
 \newpage
 
 \item (15 pts) Design an algorithm that, given two strings, determines whether one is a cyclic rotation of the other (e.g., ``example'' and ``leexamp'').
+
+\begin{lstlisting}
+public boolean isCyclicRotation(String s1, String s2) {
+	if(s1.length != s2.length) {
+		return false;
+	}
+	String concatStr1 = s1 + s1;
+	String concatStr2 = s2 + s2;
+	if(!(concatStr1.contains(s2) || concatStr2.contains(s1) ){
+		return false;
+	}
+	return true;
+}
+\end{lstlisting}
 
 \end{enumerate}
 \end{document}
