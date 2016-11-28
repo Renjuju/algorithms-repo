@@ -129,13 +129,67 @@ if(cycles == G.getNumberofEdges()) {
 
 \item (15 pts) Given a DAG and two vertices $v$ and $w$, find a shortest ancestral path between $v$ and $w$. An ancestral path between $v$ and $w$ is a common ancestor $x$ along with a shortest directed path from $v$ to $x$ and a shortest directed path from $w$ to $x$. A shortest ancestral path in the ancestral path whose total length is minimized. Warmup: Find a DAG where the shortest ancestral path goes to a common ancestor $x$ that is not LCA. 
 
+\begin{lstlisting}
+ShortestAncestralPath(v, w):
+//traverse to root
+while(notRoot) {
+	visited[v] = true;
+	v = parent[v];
+}
+
+//traverse path back to root and checks if state is visited
+shortestPath = null;
+while(shortestPath != root) {
+	if(visited[w]) {
+		shortestPath = w
+	}
+	w = parent[w]
+}
+return shortestPath
+\end{lstlisting}
+
+
+
 \newpage
 
 \item (15 pts) A bridge in a graph is an edges that, if removed, would increase the number of connected components. A graph that has no bridges is said to be {\em two-edge connected}. Write a linear time DFS-based algorithm for finding all bridges in a graph or determining whether it is not two-edge connected.
 
+\begin{lstlisting}
+count = 0;
+
+initBridge() : 
+  for all x in temp
+    temp[x] = false;
+    
+FINDINGBRIDGES(u, v):
+  temp[v] = true;
+  y[v] = temp[v];
+  for x in G adjacent to u:
+    if(temp[x]) 
+      FINDBRIDGES(v, x);
+      y[v] = min(y[v], y[w]);
+      if(x[v] == x[w]) 
+        print(v "-" w "is a bridge")
+      else if(x != u) 
+      y[v] = min(y[v], temp[x]);
+\end{lstlisting}
+
 \newpage
 
 \item (15 pts) Given a connected edge-weighted graph $G$ and a specified set of edges $S$ that contains no cycles, provide an algorithm that finds a minimum-weight spanning tree among all the spanning trees that contain all the edges in $S$. Also, provide an upper bound on the running time of your algorithm, and prove its correctness.
+
+\begin{lstlisting}
+KRUSKALMODIFIED(G) :
+x = null;
+for all v in G.V:
+    CREATE-SET(v)
+for all (u, v) in S ordered by weight(u, v), increasing:
+    if(set(u) != set(v))
+      x = x U {(u, v)}
+      union(u, v)
+\end{lstlisting}
+
+The algorithm itself should run in $O(S log V)$ time, where S is the set of edges.
 
 \newpage
 

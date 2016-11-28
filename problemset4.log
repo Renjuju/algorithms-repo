@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 NOV 2016 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 NOV 2016 19:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -326,10 +326,10 @@ Overfull \hbox (31.33347pt too wide) in paragraph at lines 54--55
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./autom
 ata.png>] [2] [3] [4] [5] [6] [7] [8] (./problemset4.aux) ) 
 Here is how much of TeX's memory you used:
- 4441 strings out of 493014
- 61483 string characters out of 6133351
- 152046 words of memory out of 5000000
- 7904 multiletter control sequences out of 15000+600000
+ 4472 strings out of 493014
+ 61821 string characters out of 6133351
+ 156046 words of memory out of 5000000
+ 7935 multiletter control sequences out of 15000+600000
  12402 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,7n,40p,504b,1062s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -344,7 +344,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on problemset4.pdf (8 pages, 243336 bytes).
+Output written on problemset4.pdf (8 pages, 248493 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
